@@ -27,6 +27,12 @@ form.addEventListener('submit', (e) => {
     
     localStorage.setItem('lead', convertData);
 
-    nome.value = '';
-    email.value = '';
+    let cadastro = document.getElementById('cadastro');
+    let carregando = `<p>Carregando...</p>`;
+    let pronto = `<p>Pronto!</p>`;
+
+    cadastro.innerHTML = carregando;
+    setTimeout(() => {
+        cadastro.innerHTML = pronto;
+    }, 1000);
 });
